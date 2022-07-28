@@ -1,0 +1,52 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: "Space Mono", monospace;
+}
+body {
+	height: 100vh;
+	font-family: "Space Mono", monospace;
+	background-color: hsl(185, 41%, 84%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 80vh;
+	height: 50vh;
+	border-radius: 25px;
+	background-color: hsl(0, 0%, 100%);
+}
+.spliter {
+	display: flex;
+	flex-direction: column;
+	width: 50vh;
+	margin-right: 50px;
+	margin-bottom: 160px;
+}
+.bill {
+	background-image: url(images/icon-dollar.svg);
+	background-repeat: no-repeat;
+	background-position: 10px;
+	background-color: hsl(189, 41%, 97%);
+	border: none;
+	border-radius: 5px;
+	width: 270px;
+	height: 35px;
+}
+.bill::placeholder {
+	text-align: right;
+	margin-right: 25px;
+	font-size: 20px;
+	color: hsl(186, 14%, 43%);
+}
+.spliter input[type="button"] {
+	display: flex;
+	flex-direction: row;
+	width: 30px;
+}
