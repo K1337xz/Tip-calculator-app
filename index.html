@@ -46,17 +46,24 @@
 						class="bill"
 						placeholder="0"
 					/>
-					<p>Select Tip %</p>
-					<input type="button" value="5%" />
-					<input type="button" value="10%" />
-					<input type="button" value="15%" />
-					<input type="button" value="25%" />
-					<input
-						type="text"
-						name="custom"
-						class="customtip"
-						placeholder="Custom"
-					/>
+					<div class="btn">
+						<p>Select Tip %</p>
+						<input type="button" value="5%" class="five" />
+						<input type="button" value="10%" class="ten" />
+						<input
+							type="button"
+							value="15%"
+							class="fifteen"
+						/><br />
+						<input type="button" value="25%" class="twenty-five" />
+						<input type="button" value="50%" class="fifty" />
+						<input
+							type="text"
+							name="custom"
+							class="customtip"
+							placeholder="Custom"
+						/>
+					</div>
 					<br />
 					<label for="numberofpeople">Number of People</label>
 					<input
@@ -64,20 +71,16 @@
 						name="numberofpeople"
 						class="numberppl"
 						placeholder="0"
+						min="0"
 					/>
 				</form>
 			</div>
 			<div class="display">
-				<p>Tip Amount</p>
+				<p>Tip Amount <span class="tip">0.00</span></p>
 				<p><sub>/ person</sub></p>
-				<p>Total</p>
+				<p>Total <span class="total">0.00</span></p>
 				<p><sub>/ person</sub></p>
-
 				<button type="reset">RESET</button>
-			</div>
-			<div class="rightdisplay">
-				<p class="tip">0.00</p>
-				<p class="total">0.00</p>
 			</div>
 		</main>
 
@@ -89,5 +92,6 @@
 				>Frontend Mentor</a
 			>. Coded by <a href="#">Your Name Here</a>.
 		</div>
+		<script src="script.js"></script>
 	</body>
 </html>
