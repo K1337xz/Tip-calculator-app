@@ -5,5 +5,6 @@ for (let i = 0; i < tip.length; i++) {
 }
 
 function calculateTip(e) {
-	console.log(num);
+	let num = this.id;
+	console.log(num / 100);
 }
