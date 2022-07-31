@@ -66,6 +66,7 @@
 					</div>
 					<br />
 					<label for="numberofpeople">Number of People</label>
+					<p class="errormsg">Can't be zero</p>
 					<input
 						type="number"
 						name="numberofpeople"
@@ -76,11 +77,13 @@
 				</form>
 			</div>
 			<div class="display">
-				<p>Tip Amount <span class="tip">0.00</span></p>
-				<p><sub>/ person</sub></p>
-				<p>Total <span class="total">0.00</span></p>
-				<p><sub>/ person</sub></p>
-				<button type="reset">RESET</button>
+				<div class="content">
+					<p>Tip Amount <span class="tip">$0.00</span></p>
+					<p><sub>/ person</sub></p>
+					<p>Total <span class="total">$0.00</span></p>
+					<p><sub>/ person</sub></p>
+				</div>
+				<button type="reset" class="resetbtn">RESET</button>
 			</div>
 		</main>
 
