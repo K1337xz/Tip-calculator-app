@@ -34,7 +34,6 @@ body {
 	background-repeat: no-repeat;
 	background-position: 10px;
 	background-color: hsl(189, 41%, 97%);
-	border: none;
 	border-radius: 5px;
 	width: 290px;
 	height: 50px;
@@ -43,6 +42,7 @@ body {
 	padding-right: 40px;
 	text-align: right;
 }
+
 .customtip {
 	width: 90px;
 	height: 50px;
@@ -70,6 +70,8 @@ body {
 	color: hsl(0, 0%, 100%);
 	border-radius: 10px;
 	font-size: 20px;
+	outline: none;
+	border: none;
 }
 .numberppl {
 	background-image: url(images/icon-person.svg);
@@ -105,17 +107,26 @@ body {
 }
 .content p:nth-child(2) {
 	margin-bottom: 20px;
+	font-size: 15px;
+}
+.content p:nth-child(4) {
+	margin-bottom: 20px;
+	font-size: 15px;
+}
+
+.content p {
+	font-size: 20px;
 }
 .tip {
 	margin-top: 30px;
 	margin-left: 30px;
-	font-size: 35px;
+	font-size: 25px;
 	color: hsl(172, 67%, 45%);
 }
 .total {
 	margin-top: 30px;
 	margin-left: 80px;
-	font-size: 35px;
+	font-size: 25px;
 	color: hsl(172, 67%, 45%);
 }
 .errormsg {
@@ -123,6 +134,9 @@ body {
 	margin-right: 40px;
 	display: none;
 	color: rgb(252, 0, 0);
+}
+.errorInput {
+	border: 2px solid rgb(252, 0, 0);
 }
 .resetbtn {
 	width: 30vh;
@@ -135,4 +149,8 @@ body {
 }
 sub {
 	color: hsl(185, 41%, 84%);
+}
+.spliter input.active {
+	background-color: hsl(172, 67%, 45%);
+	color: hsl(183, 100%, 15%);
 }
