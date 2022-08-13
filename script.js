@@ -51,7 +51,7 @@ function calculateTip() {
 		error.style.display = "none";
 		numberofPeople.classList.remove("errorInput");
 	}
-	if (!peopleNumber) {
+	if (!peopleNumber || !billss) {
 		tipValue.innerHTML = `$0.00`;
 		totalValue.innerHTML = `$0.00`;
 	}
@@ -66,7 +66,7 @@ function updateTip() {
 	totalValue.innerHTML = `$${calculateTotal.toFixed(2)}`;
 	tipValue.innerHTML = `$${tipperpeson.toFixed(2)}`;
 	localStorage.setItem("precent", num);
-	if (!peopleNumber) {
+	if (!peopleNumber || !bills) {
 		totalValue.innerHTML = `$0.00`;
 		tipValue.innerHTML = `$0.00`;
 	}
