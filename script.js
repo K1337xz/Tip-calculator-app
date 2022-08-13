@@ -28,15 +28,20 @@ function calculateTip() {
 	//change values in display
 	totalValue.innerHTML = `$${calculateTotals.toFixed(2)}`;
 	tipValue.innerHTML = `$${tipperpesonn.toFixed(2)}`;
+
 	//activate reset button
 	if (billValue.value.length > 0 && numberofPeople.value.length > 0) {
 		resetButton.classList.add("activebtn");
 	}
 	//calculate custom tip
 	if (customValue > 0 && !prcents) {
-		totalValue.innerHTML = `$${calculateCstm.toFixed(2)}`;
 		tipValue.innerHTML = `$${tipCstm.toFixed(2)}`;
-		console.log(customPrecent);
+		totalValue.innerHTML = `$${calculateCstm.toFixed(2)}`;
+		console.log(calculateCstm);
+	} else if (!customValue && !prcents) {
+		let division = billss / peopleNumber;
+		totalValue.innerHTML = `$${division}`;
+		tipValue.innerHTML = `$0.00`;
 	}
 	//errormsg
 	if (numberofPeople.value === "") {
@@ -45,10 +50,6 @@ function calculateTip() {
 	} else {
 		error.style.display = "none";
 		numberofPeople.classList.remove("errorInput");
-	}
-	if (!prcents) {
-		let withoutPrecents = billss / peopleNumber;
-		totalValue.innerHTML = `$${withoutPrecents.toFixed(2)}`;
 	}
 }
 function updateTip() {
