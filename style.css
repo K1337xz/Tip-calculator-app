@@ -168,10 +168,12 @@ body {
 	font-size: 20px;
 	border-radius: 10px;
 	border: none;
+	pointer-events: none;
 }
 .activebtn {
 	background-color: hsl(172, 67%, 45%);
 	cursor: pointer;
+	pointer-events: all;
 }
 sub {
 	color: hsl(185, 41%, 84%);
