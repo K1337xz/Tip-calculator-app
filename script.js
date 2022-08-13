@@ -51,6 +51,10 @@ function calculateTip() {
 		error.style.display = "none";
 		numberofPeople.classList.remove("errorInput");
 	}
+	if (!peopleNumber) {
+		tipValue.innerHTML = `$0.00`;
+		totalValue.innerHTML = `$0.00`;
+	}
 }
 function updateTip() {
 	let num = this.id;
@@ -62,6 +66,10 @@ function updateTip() {
 	totalValue.innerHTML = `$${calculateTotal.toFixed(2)}`;
 	tipValue.innerHTML = `$${tipperpeson.toFixed(2)}`;
 	localStorage.setItem("precent", num);
+	if (!peopleNumber) {
+		totalValue.innerHTML = `$0.00`;
+		tipValue.innerHTML = `$0.00`;
+	}
 	if (bills <= 0 && peopleNumber <= 0) {
 		tipValue.innerHTML = `$0.00`;
 		totalValue.innerHTML = `$0.00`;
@@ -73,26 +81,7 @@ function updateTip() {
 	this.classList.add("activetip");
 	localStorage.setItem("precent", num);
 }
-//function calculateCastom() {
-//	let customValue = parseFloat(customTip.value);
-//	let customPrecent = (parseFloat(billValue.value) * customValue) / 100;
-//	let totalCustom =
-//		(customPrecent + parseFloat(billValue.value)) /
-//		parseFloat(numberofPeople.value);
-//	let tipCustom =
-//		(parseFloat(billValue.value) * (customValue / 100)) /
-//		parseFloat(numberofPeople.value);
-//
-//	if (customValue > 0) {
-//		totalValue.innerHTML = `$${totalCustom.toFixed(2)}`;
-//		tipValue.innerHTML = `$${tipCustom.toFixed(2)}`;
-//	} else {
-//		tipValue.innerHTML = `$0.00`;
-//		totalValue.innerHTML = `$0.00`;
-//	}
-//	console.log(tipCustom);
-//	localStorage.setItem("precentCustom", customPrecent);
-//}
+
 function reset() {
 	billValue.value = ``;
 	numberofPeople.value = ``;
