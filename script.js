@@ -20,20 +20,10 @@ function calculateTip() {
 	let calculateTotals = (precents + billss) / peopleNumber;
 	totalValue.innerHTML = `$${calculateTotals.toFixed(2)}`;
 	tipValue.innerHTML = `$${tipperpesonn.toFixed(2)}`;
-	//active button
 	if (billValue.value.length > 0 && numberofPeople.value.length > 0) {
 		resetButton.classList.add("activebtn");
 	}
-	//
-	if (billss.length > 0 || peopleNumber > 0) {
-		let adding = billss / peopleNumber;
-		tipValue.innerHTML = `$0.00`;
-		totalValue.innerHTML = `$${adding.toFixed(2)}`;
-	} else {
-		tipValue.innerHTML = `$0.00`;
-		totalValue.innerHTML = `$0.00`;
-	}
-	//showerror
+	//errormsg
 	if (numberofPeople.value === "") {
 		error.style.display = "block";
 		numberofPeople.classList.add("errorInput");
@@ -41,8 +31,8 @@ function calculateTip() {
 		error.style.display = "none";
 		numberofPeople.classList.remove("errorInput");
 	}
+	//lena
 }
-
 function updateTip() {
 	let num = this.id;
 	let peopleNumber = parseFloat(numberofPeople.value);
@@ -58,6 +48,12 @@ function updateTip() {
 		tipValue.innerHTML = `$0.00`;
 		totalValue.innerHTML = `$0.00`;
 	}
+	if (this.classList.contains("activetip")) return;
+	for (let j = 0; j < tipButtons.length; j++) {
+		tipButtons[j].classList.remove("activetip");
+	}
+	this.classList.add("activetip");
+	localStorage.setItem("precent", num);
 }
 function calculateCastom() {
 	let customValue = parseFloat(customTip.value);
@@ -86,6 +82,10 @@ function reset() {
 	totalValue.innerHTML = `$0.00`;
 	localStorage.removeItem("precent");
 	resetButton.classList.remove("activebtn");
+	if (this.classList.contains("activetip")) return;
+	for (let x = 0; x < tipButtons.length; x++) {
+		tipButtons[x].classList.remove("activetip");
+	}
 }
 customTip.addEventListener("change", calculateCastom);
 billValue.addEventListener("change", calculateTip);
