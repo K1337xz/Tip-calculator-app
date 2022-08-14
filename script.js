@@ -37,10 +37,10 @@ function calculateTip() {
 	if (customValue > 0 && !prcents) {
 		tipValue.innerHTML = `$${tipCstm.toFixed(2)}`;
 		totalValue.innerHTML = `$${calculateCstm.toFixed(2)}`;
-		console.log(calculateCstm);
+		console.log(customValue);
 	} else if (!customValue && !prcents) {
 		let division = billss / peopleNumber;
-		totalValue.innerHTML = `$${division}`;
+		totalValue.innerHTML = `$${division.toFixed(2)}`;
 		tipValue.innerHTML = `$0.00`;
 	}
 	//errormsg
