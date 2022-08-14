@@ -212,7 +212,7 @@ sub {
 	}
 	.spliter input[type="button"] {
 		cursor: pointer;
-		width: 130px;
+		width: 125px;
 		height: 45px;
 		margin-bottom: 17px;
 		background-color: hsl(183, 100%, 15%);
@@ -237,7 +237,8 @@ sub {
 	.btn {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		gap: 18px;
+		gap: 15px;
+		margin-left: auto;
 	}
 	.numberppl {
 		margin-right: 0px;
