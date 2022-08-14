@@ -48,7 +48,6 @@ nav img {
 	outline: none;
 	border: none;
 }
-
 .bill::placeholder {
 	text-align: right;
 	margin-right: 25px;
@@ -213,7 +212,7 @@ sub {
 	}
 	.spliter input[type="button"] {
 		cursor: pointer;
-		width: 145px;
+		width: 130px;
 		height: 45px;
 		margin-bottom: 17px;
 		background-color: hsl(183, 100%, 15%);
@@ -227,7 +226,7 @@ sub {
 		margin-bottom: 11px;
 	}
 	.customtip {
-		width: 145px;
+		width: 130px;
 		height: 45px;
 		border: none;
 		outline: none;
@@ -276,5 +275,15 @@ sub {
 		background-color: hsl(172, 67%, 45%);
 		cursor: pointer;
 		pointer-events: all;
+	}
+	.tip {
+		margin-left: 0;
+		font-size: 20px;
+	}
+	.total {
+		margin-top: 30px;
+		margin-left: 44px;
+		font-size: 20px;
+		color: hsl(172, 67%, 45%);
 	}
 }
