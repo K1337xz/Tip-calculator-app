@@ -186,6 +186,9 @@ sub {
 	background-color: hsl(172, 67%, 45%);
 	color: hsl(183, 100%, 15%);
 }
+.btn {
+	width: 40vh;
+}
 @media screen and (max-width: 600px) {
 	nav img {
 		margin-top: 55px;
@@ -268,5 +271,10 @@ sub {
 		border: none;
 		pointer-events: none;
 		margin-bottom: 12px;
+	}
+	.activebtn {
+		background-color: hsl(172, 67%, 45%);
+		cursor: pointer;
+		pointer-events: all;
 	}
 }
