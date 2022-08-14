@@ -238,7 +238,6 @@ sub {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 15px;
-		margin-left: auto;
 	}
 	.numberppl {
 		margin-right: 0px;
