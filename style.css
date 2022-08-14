@@ -48,6 +48,7 @@ nav img {
 	outline: none;
 	border: none;
 }
+
 .bill::placeholder {
 	text-align: right;
 	margin-right: 25px;
