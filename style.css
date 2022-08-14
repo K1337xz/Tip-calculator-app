@@ -206,7 +206,6 @@ sub {
 	.spliter {
 		display: flex;
 		width: 100%;
-		margin-right: -10px;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
