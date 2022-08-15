@@ -25,7 +25,7 @@ nav img {
 	align-items: center;
 	justify-content: center;
 	width: 80vh;
-	height: 50vh;
+	height: 55vh;
 	border-radius: 25px;
 	background-color: hsl(0, 0%, 100%);
 }
@@ -145,13 +145,13 @@ nav img {
 }
 .tip {
 	margin-top: 30px;
-	margin-left: 30px;
+	margin-left: 4px;
 	font-size: 25px;
 	color: hsl(172, 67%, 45%);
 }
 .total {
 	margin-top: 30px;
-	margin-left: 80px;
+	margin-left: 4px;
 	font-size: 25px;
 	color: hsl(172, 67%, 45%);
 }
